@@ -24,7 +24,7 @@ const connect = () => {
 
   setInterval(() => {
       conn.write("Move: left");
-  }, 40);
+  }, 100);
 
 
   // interpret incoming data as text
