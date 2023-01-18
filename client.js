@@ -15,8 +15,17 @@ const connect = () => {
   })
 
   conn.on("connect", () => {
-    conn.write("Name: BRO" );
+    conn.write("Name: BRO");
   });
+
+  conn.on("connect", () => {
+    conn.write("Move: up");
+  });
+
+  setInterval(() => {
+      conn.write("Move: left");
+  }, 40);
+
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
